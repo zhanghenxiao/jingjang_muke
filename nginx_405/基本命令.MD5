@@ -1,0 +1,114 @@
+##### 基础配置
+
+配置静态IP ,连上网
+
+https://www.cnblogs.com/maohai-kdg/p/11445677.html
+
+https://jingyan.baidu.com/article/c45ad29c139a12051753e298.html
+
+更换yum 源为网易源
+
+https://blog.csdn.net/qq_18831583/article/details/79146759
+
+
+
+
+
+查看文件cat  /etc
+
+ **重启网卡服务**   service network restart 
+
+ 查看IP信息   ifconfig或者hostname –I  或者ip a
+
+安装epel源  yum install epel-release -y 
+
+ 查看epel源是否包含  yum list all | grep nginx
+
+安装nginx yum install nginx -y
+
+筛选nginx bin文件  rpm -ql nginx | grep bin 
+
+启动 nginx   /usr/sbin/nginx
+
+查看含nginx进程 ps -ef | grep nginx
+
+杀掉进程 kill -9 8888
+
+本地无法访问ngingx  防火墙未关闭  https://blog.51cto.com/zhibeiwang/2044168
+
+
+
+开启nginx 服务  cd  /usr/sbin/        再发送nginx
+
+关闭服务  nginx -s stop
+
+重新加载资源  nginx -s reload
+
+查看nginx 安装位置 which nginx
+
+检查nginx 配置是否ok   nginx -t 
+
+/etc/nginx/nginx.conf   配置文件目录(含资源访问的目录 )
+
+/usr/share/nginx/  静态资源放的位置
+
+node安装  wget https://nodejs.org/dist/v14.15.1/node-v14.15.1-linux-x64.tar.xz
+
+​          https://nodejs.org/dist/v14.15.1/node-v14.15.1-linux-x64.tar.xz
+
+  wget 无法使用   https://www.cnblogs.com/my-ordinary/p/13540478.html
+
+设置全局环境变量
+
+echo $PATH
+
+ln -s /root/soft/node-v14.15.1-linux-x64/bin/node /usr/local/bin/node
+
+ln -s /root/soft/node-v14.15.1-linux-x64/bin/node /usr/local/bin/npm
+
+ll /usr/local/bin
+
+mongodb 环境设置
+
+https://www.cnblogs.com/jasonLiu2018/p/12514889.html
+
+
+
+##### 目录结构
+
+/ 根目录  ls 查看根目录
+
+ll -a 平铺查看
+
+ls  默认查看/root 下的目录
+
+新建文件夹 mkdir test
+
+新建文件 touch a.js
+
+删除文件夹 rm -rf 
+
+修改文件名 mv index.html index1.html
+
+移动文件到上一级目录  index.html   ../index.html
+
+复制文件  cp index.html index1.html
+
+编辑文件 vim b.js
+
+开启编辑模式  i
+
+退出编辑模式 esc
+
+退出报存  ：wq
+
+查看文件 cat b.js
+
+查看文件的头部 head b.js
+
+查找包含的内容在文件中   grep 'log'   b.js
+
+vim教程  vimtutor
+
+
+
